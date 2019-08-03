@@ -28,6 +28,7 @@
                 </a>
                 @guest
                     @else
+                    @role('admin')
                 </a>
                      <a class="nav-link" href="{{ route('login') }}">menu 1</a>
                 </li>
@@ -37,6 +38,7 @@
       
                        <a class="nav-link" href="{{ route('login') }}">menu 3</a>
                 </li>
+                @endrole
                     @endguest
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
